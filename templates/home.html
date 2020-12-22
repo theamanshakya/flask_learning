@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="row">
+        {% for post in posts %}
+        <div class=" mb-2">
+            <div class="card" >
+                <div class="card-body">
+                  <h5 class="display-4">{{ post.title }}</h5>
+                  <p class="card-text">{{ post.content }}</p>
+                  <small>Post Created on {{ post.date }} by <strong> {{ post.author }} </strong></small>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
